@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodDiaryApp.Views.RecipesPage"
+              Title="My Recipes" x:Name="myRecipesPage" BindingContext="{Binding}">
+
+        <ContentPage.Content>
+            <StackLayout>
+                <!-- сюда выгружается список рецептов из локальной БД -->
+                <ListView x:Name="myRecipesList" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid ColumnSpacing="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="0.3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.1*" />
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding Name}" FontSize="Medium" Grid.Column="0"/>
+                                        <Button x:Name="addButton" Text="Add" CommandParameter="{Binding Id}" FontSize="Medium"
+                                                BackgroundColor="DimGray" Grid.Column="1" Clicked="AddButton_Clicked" 
+                                                IsVisible="{Binding Source={x:Reference myRecipesPage}, Path=BindingContext.IsButtonVisible}" />
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ImageButton Source="add_button.png" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Clicked="Add_New_Recipe_Button_Clicked" BackgroundColor="Transparent"/>
+            </StackLayout>
+        </ContentPage.Content>
+</ContentPage> 

@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms ="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="FoodDiaryApp.Views.BalancePage">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <DatePicker Date="{Binding FirstDate}"  Grid.Column="0" Grid.Row="0" DateSelected="date1_DateSelected"/>
+                    <DatePicker Date="{Binding SecondtDate}"  Grid.Column="1" Grid.Row="0" DateSelected="date2_DateSelected"/>
+                    <forms:ChartView x:Name="ChartNormal" HeightRequest="150" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <forms:ChartView x:Name="ChartUser" HeightRequest="150" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Name" Grid.Column="0" Grid.Row="0"/>
+                    <Label Text="My value (in microgram)" Grid.Column="1" Grid.Row="0"/>
+                    <Label Text="Normal value (in microgram)" Grid.Column="2" Grid.Row="0"/>
+
+                    <Label Text="A" Grid.Column="0" Grid.Row="1"/>
+                    <Label x:Name="UserA" Grid.Column="1" Grid.Row="1"/>
+                    <Label x:Name="NormalA" Grid.Column="2" Grid.Row="1"/>
+
+                    <Label Text="B1" Grid.Column="0" Grid.Row="2"/>
+                    <Label x:Name="UserB1" Grid.Column="1" Grid.Row="2"/>
+                    <Label x:Name="NormalB1" Grid.Column="2" Grid.Row="2"/>
+
+                    <Label Text="B2" Grid.Column="0" Grid.Row="3"/>
+                    <Label x:Name="UserB2" Grid.Column="1" Grid.Row="3"/>
+                    <Label x:Name="NormalB2" Grid.Column="2" Grid.Row="3"/>
+
+                    <Label Text="B3" Grid.Column="0" Grid.Row="4"/>
+                    <Label x:Name="UserB3" Grid.Column="1" Grid.Row="4"/>
+                    <Label x:Name="NormalB3" Grid.Column="2" Grid.Row="4"/>
+
+                    <Label Text="B4" Grid.Column="0" Grid.Row="5"/>
+                    <Label x:Name="UserB4" Grid.Column="1" Grid.Row="5"/>
+                    <Label x:Name="NormalB4" Grid.Column="2" Grid.Row="5"/>
+
+                    <Label Text="B5" Grid.Column="0" Grid.Row="6"/>
+                    <Label x:Name="UserB5" Grid.Column="1" Grid.Row="6"/>
+                    <Label x:Name="NormalB5" Grid.Column="2" Grid.Row="6"/>
+
+                    <Label Text="B6" Grid.Column="0" Grid.Row="7"/>
+                    <Label x:Name="UserB6" Grid.Column="1" Grid.Row="7"/>
+                    <Label x:Name="NormalB6" Grid.Column="2" Grid.Row="7"/>
+
+                    <Label Text="B8" Grid.Column="0" Grid.Row="8"/>
+                    <Label x:Name="UserB8" Grid.Column="1" Grid.Row="8"/>
+                    <Label x:Name="NormalB8" Grid.Column="2" Grid.Row="8"/>
+
+                    <Label Text="B9" Grid.Column="0" Grid.Row="9"/>
+                    <Label x:Name="UserB9" Grid.Column="1" Grid.Row="9"/>
+                    <Label x:Name="NormalB9" Grid.Column="2" Grid.Row="9"/>
+
+                    <Label Text="B12" Grid.Column="0" Grid.Row="10"/>
+                    <Label x:Name="UserB12" Grid.Column="1" Grid.Row="10"/>
+                    <Label x:Name="NormalB12" Grid.Column="2" Grid.Row="10"/>
+
+                    <Label Text="C" Grid.Column="0" Grid.Row="11"/>
+                    <Label x:Name="UserC" Grid.Column="1" Grid.Row="11"/>
+                    <Label x:Name="NormalC" Grid.Column="2" Grid.Row="11"/>
+
+                    <Label Text="D" Grid.Column="0" Grid.Row="12"/>
+                    <Label x:Name="UserD" Grid.Column="1" Grid.Row="12"/>
+                    <Label x:Name="NormalD" Grid.Column="2" Grid.Row="12"/>
+
+                    <Label Text="E" Grid.Column="0" Grid.Row="13"/>
+                    <Label x:Name="UserE" Grid.Column="1" Grid.Row="13"/>
+                    <Label x:Name="NormalE" Grid.Column="2" Grid.Row="13"/>
+
+                    <Label Text="H" Grid.Column="0" Grid.Row="14"/>
+                    <Label x:Name="UserH" Grid.Column="1" Grid.Row="14"/>
+                    <Label x:Name="NormalH" Grid.Column="2" Grid.Row="14"/>
+
+                    <Label Text="K" Grid.Column="0" Grid.Row="15"/>
+                    <Label x:Name="UserK" Grid.Column="1" Grid.Row="15"/>
+                    <Label x:Name="NormalK" Grid.Column="2" Grid.Row="15"/>
+
+                    <Label Text="Ferrum" Grid.Column="0" Grid.Row="16"/>
+                    <Label x:Name="UserFerrum" Grid.Column="1" Grid.Row="16"/>
+                    <Label x:Name="NormalFerrum" Grid.Column="2" Grid.Row="16"/>
+
+                    <Label Text="Zinc" Grid.Column="0" Grid.Row="17"/>
+                    <Label x:Name="UserZinc" Grid.Column="1" Grid.Row="17"/>
+                    <Label x:Name="NormalZinc" Grid.Column="2" Grid.Row="17"/>
+
+                    <Label Text="Cuprum" Grid.Column="0" Grid.Row="18"/>
+                    <Label x:Name="UserCuprum" Grid.Column="1" Grid.Row="18"/>
+                    <Label x:Name="NormalCuprum" Grid.Column="2" Grid.Row="18"/>
+
+                    <Label Text="Cobalt" Grid.Column="0" Grid.Row="19"/>
+                    <Label x:Name="UserCobalt" Grid.Column="1" Grid.Row="19"/>
+                    <Label x:Name="NormalCobalt" Grid.Column="2" Grid.Row="19"/>
+
+                    <Label Text="Manganese" Grid.Column="0" Grid.Row="20"/>
+                    <Label x:Name="UserManganese" Grid.Column="1" Grid.Row="20"/>
+                    <Label x:Name="NormalManganese" Grid.Column="2" Grid.Row="20"/>
+
+                    <Label Text="Selenium" Grid.Column="0" Grid.Row="21"/>
+                    <Label x:Name="UserSelenium" Grid.Column="1" Grid.Row="21"/>
+                    <Label x:Name="NormalSelenium" Grid.Column="2" Grid.Row="21"/>
+
+                    <Label Text="Fluorine" Grid.Column="0" Grid.Row="22"/>
+                    <Label x:Name="UserFluorine" Grid.Column="1" Grid.Row="22"/>
+                    <Label x:Name="NormalFluorine" Grid.Column="2" Grid.Row="22"/>
+
+                    <Label Text="Iodine" Grid.Column="0" Grid.Row="23"/>
+                    <Label x:Name="UserIodine" Grid.Column="1" Grid.Row="23"/>
+                    <Label x:Name="NormalIodine" Grid.Column="2" Grid.Row="23"/>
+
+                    <Label Text="Calcium" Grid.Column="0" Grid.Row="24"/>
+                    <Label x:Name="UserCalcium" Grid.Column="1" Grid.Row="24"/>
+                    <Label x:Name="NormalCalcium" Grid.Column="2" Grid.Row="24"/>
+
+                    <Label Text="Phosphorus" Grid.Column="0" Grid.Row="25"/>
+                    <Label x:Name="UserPhosphorus" Grid.Column="1" Grid.Row="25"/>
+                    <Label x:Name="NormalPhosphorus" Grid.Column="2" Grid.Row="25"/>
+
+                    <Label Text="Magnesium" Grid.Column="0" Grid.Row="26"/>
+                    <Label x:Name="UserMagnesium" Grid.Column="1" Grid.Row="26"/>
+                    <Label x:Name="NormalMagnesium" Grid.Column="2" Grid.Row="26"/>
+
+                    <Label Text="Sodium" Grid.Column="0" Grid.Row="27"/>
+                    <Label x:Name="UserSodium" Grid.Column="1" Grid.Row="27"/>
+                    <Label x:Name="NormalSodium" Grid.Column="2" Grid.Row="27"/>
+
+                    <Label Text="Chlorine" Grid.Column="0" Grid.Row="28"/>
+                    <Label x:Name="UserChlorine" Grid.Column="1" Grid.Row="28"/>
+                    <Label x:Name="NormalChlorine" Grid.Column="2" Grid.Row="28"/>
+
+                    <Label Text="Sulfur" Grid.Column="0" Grid.Row="29"/>
+                    <Label x:Name="UserSulfur" Grid.Column="1" Grid.Row="29"/>
+                    <Label x:Name="NormalSulfur" Grid.Column="2" Grid.Row="29"/>
+
+                    <Label Text="Molybdenum" Grid.Column="0" Grid.Row="30"/>
+                    <Label x:Name="UserMolybdenum" Grid.Column="1" Grid.Row="30"/>
+                    <Label x:Name="NormalMolybdenum" Grid.Column="2" Grid.Row="30"/>
+
+                    <Label Text="Chromium" Grid.Column="0" Grid.Row="31"/>
+                    <Label x:Name="UserChromium" Grid.Column="1" Grid.Row="31"/>
+                    <Label x:Name="NormalChromium" Grid.Column="2" Grid.Row="31"/>
+
+                    <Label Text="Kalium" Grid.Column="0" Grid.Row="32"/>
+                    <Label x:Name="UserKalium" Grid.Column="1" Grid.Row="32"/>
+                    <Label x:Name="NormalKalium" Grid.Column="2" Grid.Row="32"/>
+
+
+                    <!--<Label Text="A" Grid.Column="0" Grid.Row="1"/>
+                    <Label Text="{Binding UserDailyIntake.A}" Grid.Column="1" Grid.Row="1"/>
+                    <Label Text="{Binding NormalDailyIntake.A}" Grid.Column="2" Grid.Row="1"/>
+
+                    <Label Text="B1" Grid.Column="0" Grid.Row="2"/>
+                    <Label Text="{Binding UserDailyIntake.B1}" Grid.Column="1" Grid.Row="2"/>
+                    <Label Text="{Binding NormalDailyIntake.B1}" Grid.Column="2" Grid.Row="2"/>
+
+                    <Label Text="B2" Grid.Column="0" Grid.Row="3"/>
+                    <Label Text="{Binding UserDailyIntake.B2}" Grid.Column="1" Grid.Row="3"/>
+                    <Label Text="{Binding NormalDailyIntake.B2}" Grid.Column="2" Grid.Row="3"/>
+
+                    <Label Text="B3" Grid.Column="0" Grid.Row="4"/>
+                    <Label Text="{Binding UserDailyIntake.B3}" Grid.Column="1" Grid.Row="4"/>
+                    <Label Text="{Binding NormalDailyIntake.B3}" Grid.Column="2" Grid.Row="4"/>
+
+                    <Label Text="B4" Grid.Column="0" Grid.Row="5"/>
+                    <Label Text="{Binding UserDailyIntake.B4}" Grid.Column="1" Grid.Row="5"/>
+                    <Label Text="{Binding NormalDailyIntake.B4}" Grid.Column="2" Grid.Row="5"/>
+
+                    <Label Text="B5" Grid.Column="0" Grid.Row="6"/>
+                    <Label Text="{Binding UserDailyIntake.B5}" Grid.Column="1" Grid.Row="6"/>
+                    <Label Text="{Binding NormalDailyIntake.B5}" Grid.Column="2" Grid.Row="6"/>
+
+                    <Label Text="B6" Grid.Column="0" Grid.Row="7"/>
+                    <Label Text="{Binding UserDailyIntake.B6}" Grid.Column="1" Grid.Row="7"/>
+                    <Label Text="{Binding NormalDailyIntake.B6}" Grid.Column="2" Grid.Row="7"/>
+
+                    <Label Text="B8" Grid.Column="0" Grid.Row="8"/>
+                    <Label Text="{Binding UserDailyIntake.B8}" Grid.Column="1" Grid.Row="8"/>
+                    <Label Text="{Binding NormalDailyIntake.B8}" Grid.Column="2" Grid.Row="8"/>
+
+                    <Label Text="B9" Grid.Column="0" Grid.Row="9"/>
+                    <Label Text="{Binding UserDailyIntake.B9}" Grid.Column="1" Grid.Row="9"/>
+                    <Label Text="{Binding NormalDailyIntake.B9}" Grid.Column="2" Grid.Row="9"/>
+
+                    <Label Text="B12" Grid.Column="0" Grid.Row="10"/>
+                    <Label Text="{Binding UserDailyIntake.B12}" Grid.Column="1" Grid.Row="10"/>
+                    <Label Text="{Binding NormalDailyIntake.B12}" Grid.Column="2" Grid.Row="10"/>
+
+                    <Label Text="C" Grid.Column="0" Grid.Row="11"/>
+                    <Label Text="{Binding UserDailyIntake.C}" Grid.Column="1" Grid.Row="11"/>
+                    <Label Text="{Binding NormalDailyIntake.C}" Grid.Column="2" Grid.Row="11"/>
+
+                    <Label Text="D" Grid.Column="0" Grid.Row="12"/>
+                    <Label Text="{Binding UserDailyIntake.D}" Grid.Column="1" Grid.Row="12"/>
+                    <Label Text="{Binding NormalDailyIntake.D}" Grid.Column="2" Grid.Row="12"/>
+
+                    <Label Text="E" Grid.Column="0" Grid.Row="13"/>
+                    <Label Text="{Binding UserDailyIntake.E}" Grid.Column="1" Grid.Row="13"/>
+                    <Label Text="{Binding NormalDailyIntake.E}" Grid.Column="2" Grid.Row="13"/>
+
+                    <Label Text="H" Grid.Column="0" Grid.Row="14"/>
+                    <Label Text="{Binding UserDailyIntake.H}" Grid.Column="1" Grid.Row="14"/>
+                    <Label Text="{Binding NormalDailyIntake.H}" Grid.Column="2" Grid.Row="14"/>
+
+                    <Label Text="K" Grid.Column="0" Grid.Row="15"/>
+                    <Label Text="{Binding UserDailyIntake.K}" Grid.Column="1" Grid.Row="15"/>
+                    <Label Text="{Binding NormalDailyIntake.K}" Grid.Column="2" Grid.Row="15"/>
+
+                    <Label Text="Ferrum" Grid.Column="0" Grid.Row="16"/>
+                    <Label Text="{Binding UserDailyIntake.Ferrum}" Grid.Column="1" Grid.Row="16"/>
+                    <Label Text="{Binding NormalDailyIntake.Ferrum}" Grid.Column="2" Grid.Row="16"/>
+
+                    <Label Text="Zinc" Grid.Column="0" Grid.Row="17"/>
+                    <Label Text="{Binding UserDailyIntake.Zinc}" Grid.Column="1" Grid.Row="17"/>
+                    <Label Text="{Binding NormalDailyIntake.Zinc}" Grid.Column="2" Grid.Row="17"/>
+
+                    <Label Text="Cuprum" Grid.Column="0" Grid.Row="18"/>
+                    <Label Text="{Binding UserDailyIntake.Cuprum}" Grid.Column="1" Grid.Row="18"/>
+                    <Label Text="{Binding NormalDailyIntake.Cuprum}" Grid.Column="2" Grid.Row="18"/>
+
+                    <Label Text="Cobalt" Grid.Column="0" Grid.Row="19"/>
+                    <Label Text="{Binding UserDailyIntake.Cobalt}" Grid.Column="1" Grid.Row="19"/>
+                    <Label Text="{Binding NormalDailyIntake.Cobalt}" Grid.Column="2" Grid.Row="19"/>
+
+                    <Label Text="Manganese" Grid.Column="0" Grid.Row="20"/>
+                    <Label Text="{Binding UserDailyIntake.Manganese}" Grid.Column="1" Grid.Row="20"/>
+                    <Label Text="{Binding NormalDailyIntake.Manganese}" Grid.Column="2" Grid.Row="20"/>
+
+                    <Label Text="Selenium" Grid.Column="0" Grid.Row="21"/>
+                    <Label Text="{Binding UserDailyIntake.Selenium}" Grid.Column="1" Grid.Row="21"/>
+                    <Label Text="{Binding NormalDailyIntake.Selenium}" Grid.Column="2" Grid.Row="21"/>
+
+                    <Label Text="Fluorine" Grid.Column="0" Grid.Row="22"/>
+                    <Label Text="{Binding UserDailyIntake.Fluorine}" Grid.Column="1" Grid.Row="22"/>
+                    <Label Text="{Binding NormalDailyIntake.Fluorine}" Grid.Column="2" Grid.Row="22"/>
+
+                    <Label Text="Iodine" Grid.Column="0" Grid.Row="23"/>
+                    <Label Text="{Binding UserDailyIntake.Iodine}" Grid.Column="1" Grid.Row="23"/>
+                    <Label Text="{Binding NormalDailyIntake.Iodine}" Grid.Column="2" Grid.Row="23"/>
+
+                    <Label Text="Calcium" Grid.Column="0" Grid.Row="24"/>
+                    <Label Text="{Binding UserDailyIntake.Calcium}" Grid.Column="1" Grid.Row="24"/>
+                    <Label Text="{Binding NormalDailyIntake.Calcium}" Grid.Column="2" Grid.Row="24"/>
+
+                    <Label Text="Phosphorus" Grid.Column="0" Grid.Row="25"/>
+                    <Label Text="{Binding UserDailyIntake.Phosphorus}" Grid.Column="1" Grid.Row="25"/>
+                    <Label Text="{Binding NormalDailyIntake.Phosphorus}" Grid.Column="2" Grid.Row="25"/>
+
+                    <Label Text="Magnesium" Grid.Column="0" Grid.Row="26"/>
+                    <Label Text="{Binding UserDailyIntake.Magnesium}" Grid.Column="1" Grid.Row="26"/>
+                    <Label Text="{Binding NormalDailyIntake.Magnesium}" Grid.Column="2" Grid.Row="26"/>
+
+                    <Label Text="Sodium" Grid.Column="0" Grid.Row="27"/>
+                    <Label Text="{Binding UserDailyIntake.Sodium}" Grid.Column="1" Grid.Row="27"/>
+                    <Label Text="{Binding NormalDailyIntake.Sodium}" Grid.Column="2" Grid.Row="27"/>
+
+                    <Label Text="Chlorine" Grid.Column="0" Grid.Row="28"/>
+                    <Label Text="{Binding UserDailyIntake.Chlorine}" Grid.Column="1" Grid.Row="28"/>
+                    <Label Text="{Binding NormalDailyIntake.Chlorine}" Grid.Column="2" Grid.Row="28"/>
+
+                    <Label Text="Sulfur" Grid.Column="0" Grid.Row="29"/>
+                    <Label Text="{Binding UserDailyIntake.Sulfur}" Grid.Column="1" Grid.Row="29"/>
+                    <Label Text="{Binding NormalDailyIntake.Sulfur}" Grid.Column="2" Grid.Row="29"/>
+
+                    <Label Text="Molybdenum" Grid.Column="0" Grid.Row="30"/>
+                    <Label Text="{Binding UserDailyIntake.Molybdenum}" Grid.Column="1" Grid.Row="30"/>
+                    <Label Text="{Binding NormalDailyIntake.Molybdenum}" Grid.Column="2" Grid.Row="30"/>
+
+                    <Label Text="Chromium" Grid.Column="0" Grid.Row="31"/>
+                    <Label Text="{Binding UserDailyIntake.Chromium}" Grid.Column="1" Grid.Row="31"/>
+                    <Label Text="{Binding NormalDailyIntake.Chromium}" Grid.Column="2" Grid.Row="31"/>
+
+                    <Label Text="Kalium" Grid.Column="0" Grid.Row="32"/>
+                    <Label Text="{Binding UserDailyIntake.Kalium}" Grid.Column="1" Grid.Row="32"/>
+                    <Label Text="{Binding NormalDailyIntake.Kalium}" Grid.Column="2" Grid.Row="32"/>-->
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

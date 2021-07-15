@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="launcher_background">#FFFFFF</color>
+  <color name="colorPrimary">@android:color/black</color>
+  <color name="colorPrimaryDark">@android:color/black</color>
+  <color name="windowBackground">#4a4a4a</color>
+  <color name="navigationBarColor">@android:color/black</color>
+  <color name="textColorPrimary">#FFFFFF</color>
+  <color name="colorAccent">#a4a4a4</color>
+  <color name="colorPicker">#a4a4a4</color>
+</resources>

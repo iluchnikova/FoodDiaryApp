@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodDiaryApp.Views.SetWeightPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Set weight of recipe"/>
+            <Label x:Name="recipeName"/>
+            <Entry x:Name="fieldForWeight" Text="{Binding}" Keyboard="Numeric" Placeholder="0"/>
+            <Button Text="Save" BackgroundColor="DimGray" Clicked="SaveButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

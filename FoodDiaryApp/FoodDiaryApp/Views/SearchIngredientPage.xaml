@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
+             x:Class="FoodDiaryApp.Views.SearchIngredientPage"
+             Title="Ingredient">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Name" FontSize="Large" FontAttributes="Bold"/>
+            <Entry x:Name="searchIngredient" Placeholder="Start entry ingredient name" TextChanged="SearchIngredient_TextChanged"/>
+            <ListView x:Name="IngredientNameListView" HasUnevenRows="True" ItemsSource="{Binding IdAndName}" ItemTapped="IngredientNameListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>                                    
+                                    <Label x:Name="labelIngredientName" Text="{Binding Name}"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Weight"  FontSize="Large" FontAttributes="Bold"/>
+            <Entry x:Name="ingredientWeight" Text="{Binding IngredientWeight}" Keyboard="Numeric" TextChanged="IngredientWeight_TextChanged"/>
+            <Button Text="Save" BackgroundColor="DimGray" Clicked="Save_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

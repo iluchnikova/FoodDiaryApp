@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodDiaryApp.Views.MealPage"
+             Title="Meal">
+
+    <StackLayout>
+        <Label Text="Date" FontSize="Medium"/>
+        <DatePicker x:Name="meal_DataPicker" Format="dd/MM/yyyy" HorizontalOptions="Fill" VerticalOptions="Start" Date="{Binding Meal.DateTime}" DateSelected="Meal_DataPicker_DateSelected"/>
+        <Label Text="Meal Type" FontSize="Medium"/>
+        <Picker x:Name="picker" Title="Select meal type" SelectedIndexChanged="picker_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Breakfast</x:String>
+                <x:String>Brunch</x:String>
+                <x:String>Lunch</x:String>
+                <x:String>Dinner</x:String>
+                <x:String>Supper</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label Text="Recipes" FontSize="Medium"/>
+        <ListView x:Name="mealNameListView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid ColumnSpacing="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.1*" />
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Name}" FontSize="Medium" Grid.Column="0"/>
+                                <Label Text="{Binding Weight}" FontSize="Medium" Grid.Column="1" HorizontalTextAlignment="End"/>
+                                <ImageButton Source="trash.png" CommandParameter="{Binding Id}" Grid.Column="2" Clicked="DeleteRecipeButton_Clicked" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ImageButton Source="add_button.png" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Clicked="Add_Food_Button_Clicked" BackgroundColor="Transparent"/>
+        <Button Text="Save" BackgroundColor="DimGray" Clicked="SaveButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

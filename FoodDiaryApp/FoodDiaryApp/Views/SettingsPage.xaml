@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodDiaryApp.Views.SettingsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Birthday" FontSize="Large" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"/>
+                <DatePicker Date="{Binding Birthday}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Fill" DateSelected="DatePicker_DateSelected"/>
+
+                <Label Text="{Binding Sex}" FontSize="Large" VerticalOptions="Center" Grid.Column="0" Grid.Row="1"/>
+                <Switch IsToggled="true" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Fill" Toggled="Switch_Toggled"/>
+
+                <Label Text="Tall(cm)" FontSize="Large" VerticalOptions="Center" Grid.Column="0" Grid.Row="2"/>
+                <Entry Text="{Binding Tall}" Keyboard="Numeric" Grid.Column="1" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Fill" TextChanged="Tall_TextChanged"/>
+
+                <Label Text="Weight(kg)" FontSize="Large" VerticalOptions="Center" Grid.Column="0" Grid.Row="3"/>
+                <Entry Text="{Binding Weight}" Keyboard="Numeric" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Fill" TextChanged="Weight_TextChanged"/>
+
+                <Label Text="PhysicalActivity" FontSize="Large" VerticalOptions="Center" Grid.Column="0" Grid.Row="4" Grid.RowSpan="2"/>
+                <Slider x:Name="activitySlider" Minimum="0" Maximum="4" Value="0" MinimumTrackColor="LightGreen" MaximumTrackColor="Black"
+                        Grid.Column="1" Grid.Row="4" ValueChanged="Slider_ValueChanged" VerticalOptions="End"/>
+                <Label Text="{Binding Source={x:Reference Name=activitySlider}, Path=Value}" FontSize="Medium" VerticalOptions="Start" HorizontalOptions="Center" Grid.Column="1" Grid.Row="5"/>
+
+                <Label Text="Participation in the study" FontSize="Large" VerticalOptions="Center" Grid.Column="0" Grid.Row="5"/>
+                <Switch IsToggled="true" Grid.Column="1" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Fill" Toggled="Agree_Toggled"/>
+
+                <Button Text="Save" BackgroundColor="DimGray" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Clicked="Save_Clicked" HorizontalOptions="Fill"/>
+                <Button Text="Clear" BackgroundColor="DimGray" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Clicked="Clear_Clicked" HorizontalOptions="Fill"/>
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:FoodDiaryApp.Views"
+       Title="FoodDiaryApp"
+       x:Class="FoodDiaryApp.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Background">#4a4a4a</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style x:Key="BlackStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="Black"/>
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource Background}" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BlackStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BlackStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+    
+    <TabBar>
+        <ShellContent Title="My Diet" Route="MyDiet"  Icon="tab_day.png" ContentTemplate="{DataTemplate local:MyDietPage}" />
+        <ShellContent Title="Recipe Book" Route="RecipeBook" Icon="tab_book.png" ContentTemplate="{DataTemplate local:RecipesPage}" />
+        <ShellContent Title="Balance" Route="Balance"  Icon="tab_diagramm.png" ContentTemplate="{DataTemplate local:BalancePage}" />
+        <ShellContent Title="Settings" Route="Settings"  Icon="tab_settings.png" ContentTemplate="{DataTemplate local:SettingsPage}" />
+        <!--<ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />-->
+    </TabBar>
+
+    <ShellContent Route="NewRecipe" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:NewRecipePage}"/>
+    <ShellContent Route="Meal" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:MealPage}"/>
+    <ShellContent Route="AddIngredient" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:SearchIngredientPage}"/>
+    <ShellContent Route="SetWeight" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:SetWeightPage}"/>
+
+
+    <!--
+        If you would like to navigate to this content you can do so by calling
+        await Shell.Current.GoToAsync("//LoginPage");
+    -->
+    <!--<ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />
+    <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />-->
+
+
+</Shell>
